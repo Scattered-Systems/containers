@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  network:
+    container_name: cardano-node
+    image: inputoutput/cardano-node
+    volumes:
+      - /data
+
+volumes:
+  data:

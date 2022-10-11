@@ -1,0 +1,17 @@
+version: "3.9"
+services:
+  database:
+    container_name: mongo
+    environment:
+      MONGO_INITDB_ROOT_PASSWORD: example
+      MONGO_INITDB_ROOT_USERNAME: root
+    image: mongo
+    ports:
+      - "27017:27017"
+    restart: always
+    volumes:
+      - /data/db/mongo:/data/db
+
+volumes:
+  config:
+  data:

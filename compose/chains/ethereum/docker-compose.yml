@@ -1,0 +1,13 @@
+version: "3.9"
+services:
+
+  node:
+    container_name: ethereum-node
+    image: trufflesuite/ganache
+    ports:
+      - "7545:7545"
+      - "8545:8545"
+    restart: always
+
+volumes:
+  data:
