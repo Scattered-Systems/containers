@@ -5,6 +5,7 @@ RUN apt-get update -y && apt-get upgrade -y
 FROM builder-base as builder
 
 RUN apt-get install -y \
+    apt-utils \
     build-essential \
     clang \
     curl \
@@ -18,6 +19,9 @@ RUN apt-get install -y \
     llvm \
     make \
     pkg-config \
+    postgresql \
+    postgresql-contrib \
+    procps \
     protobuf-compiler \
     unzip \
     wget \
