@@ -1,6 +1,6 @@
-FROM scsys/debian:latest as builder-base
+FROM scsys/photon:latest as builder-base
 
-RUN apt-get update -y && apt-get upgrade -y
+RUN yum update -y && yum upgrade -y
 
 FROM builder-base as builder
 
@@ -8,7 +8,7 @@ ENV ENV_MODE=dev \
     PYTHONUNBUFFERED=1 \
     POETRY_VIRTUALENVS_CREATE=false
 
-RUN apt-get install -y \
+RUN yum install -y \
     python3.9 \
     python3.9-dev \
     python3-pip \

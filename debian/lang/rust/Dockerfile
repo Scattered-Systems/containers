@@ -8,12 +8,16 @@ RUN curl https://sh.rustup.rs -sSf | bash -s -- -y
 
 ENV PATH="/root/.cargo/bin:${PATH}"
 
-FROM builder as latest
-
 RUN rustup update && \
     rustup install nightly && \
     rustup target add wasm32-unknown-unknown --toolchain nightly
 
-FROM latest as nightly
+FROM builder as nightly
 
-RUN rustup default nightly
+RUN rustup component add clippy rustfmt --toolchain nightly && \
+    rustup default nightly 
+
+FROM builder as latest
+
+RUN rustup component add clippy rustfmt --toolchain stable && \
+    rustup default stable

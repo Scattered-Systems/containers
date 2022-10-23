@@ -6,4 +6,7 @@ FROM builder-base as builder
 
 RUN apt-get install -y \
     nodejs \
+    npm \
     yarn
+
+RUN nodejs --version && npm --version && yarn --version
