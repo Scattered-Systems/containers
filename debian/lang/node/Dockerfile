@@ -7,11 +7,17 @@ RUN apt-get install -y software-properties-common
 FROM builder-base as latest
 
 RUN curl -sL https://deb.nodesource.com/setup_18.x | bash -
+
+RUN apt-get update -y
+
 RUN apt-get install -y nodejs yarn
 
-FROM builder-base as stable
+# FROM builder-base as stable
 
-RUN curl -sL https://deb.nodesource.com/setup_16.x | bash -
-RUN apt-get install -y nodejs yarn 
+# RUN curl -sL https://deb.nodesource.com/setup_16.x | bash -
 
-RUN nodejs --version && npm --version && yarn --version
+# RUN apt-get update -y
+
+# RUN apt-get install -y nodejs yarn
+
+# RUN nodejs --version && npm --version && yarn --version
