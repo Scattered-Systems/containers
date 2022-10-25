@@ -11,4 +11,5 @@ RUN curl https://get.wasmer.io -sSfL | bash
 FROM builder
 
 VOLUME [ "/usr/src" ]
+VOLUME [ "/config" ]
 VOLUME [ "/data" ]
