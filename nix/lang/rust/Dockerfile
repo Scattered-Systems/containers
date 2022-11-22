@@ -1,10 +1,6 @@
-FROM nixos/nix as builder-base
+FROM scsys/nixos:lts as builder-base
 
-RUN nix-env -qaP \
-    curl \
-    git \
-    openssl \
-    wget
+RUN nix-channel --update
 
 FROM builder-base as builder
 
