@@ -32,5 +32,5 @@ jobs:
         name: ${{ env.IMAGE_NAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
         snapshot: true
-        tag: ${{ env.IMAGE_TAG }}
+        tags: [ ${{ env.IMAGE_TAG }} ]
         username: ${{ secrets.DOCKERHUB_USERNAME }}
