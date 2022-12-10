@@ -1,25 +1,30 @@
-# scsys/containers
+# template-workspace
 
-This repository is reserved for containerized environments, services, and otherwise written in support of the Scattered-Systems initiative while designed for generaility.
+A barebones repository template for quickly setting up a proper workspace
 
 ## Installation
 
-Make sure you have docker installed on the target system
+Start by cloning the repository
 
 ```bash
+git clone https://github.com/FL03/template-workspace
 
 ```
 
 ## Usage
 
-```bash
+```rust
 
 ```
 
 ## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Pull requests are welcome. For major changes, please open an issue first
+to discuss what you would like to change.
 
 Please make sure to update tests as appropriate.
 
 ## License
-[MIT](https://choosealicense.com/licenses/mit/)
+
+* [Apache-2.0](https://choosealicense.com/licenses/apache-2.0/)
+* [MIT](https://choosealicense.com/licenses/mit/)
