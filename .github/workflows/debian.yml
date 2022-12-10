@@ -27,8 +27,7 @@ jobs:
     - name: Publish to Registry
       uses: elgohr/Publish-Docker-Github-Action@v5
       with:
-        context: debian
-        dockerfile: Dockerfile
+        dockerfile: debian/Dockerfile
         name: ${{ env.IMAGE_NAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
         snapshot: true
